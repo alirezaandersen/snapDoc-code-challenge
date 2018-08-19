@@ -2,4 +2,8 @@ require 'pry'
 
 class Ecommerce
 
-end 
+  def self.totals?(prices)
+
+  end
+  
+end
