@@ -1,5 +1,6 @@
 require 'json'
 require 'rspec/autorun'
+require 'rspec/pride'
 require_relative 'ecommerce'
 
 
@@ -15,17 +16,17 @@ describe "Ecommerce" do
     expect(Ecommerce.totals?([0.1917509379459914,2.590098310320428,5.71666797517846,8.53920650645232])).to eq([0,3,6,9])
   end
 
-  # it "sums total properly" do
-  #   expect(Ecommerce.totals?([1.6967212021748623,9.993624333862371,8.70035407128668,1.1663572593314186])).to eq([2,10,9,1])
-  # end
+  it "sums total properly" do
+    expect(Ecommerce.totals?([1.6967212021748623,9.993624333862371,8.70035407128668,1.1663572593314186])).to eq([2,10,9,1])
+  end
   #
-  # it "sums total properly" do
-  #   expect(Ecommerce.totals?([7.933555499166363,3.7089642327695183,3.267441694191633,9.211639132180325])).to eq([8,4,3,9])
-  # end
-  #
-  # it "sums total properly" do
-  #   expect(Ecommerce.totals?([6.456874695737385,4.878296596784399,3.7485736214862952,0.36132226314163907,1.3698297805572857])).to eq([6,5,4,0,1])
-  # end
+  it "sums total properly" do
+    expect(Ecommerce.totals?([7.933555499166363,3.7089642327695183,3.267441694191633,9.211639132180325])).to eq([8,4,3,9])
+  end
+
+  it "sums total properly" do
+    expect(Ecommerce.totals?([6.456874695737385,4.878296596784399,3.7485736214862952,0.36132226314163907,1.3698297805572857])).to eq([6,5,4,0,1])
+  end
 
   end
 end
