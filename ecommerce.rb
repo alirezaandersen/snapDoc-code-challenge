@@ -17,7 +17,7 @@ class Ecommerce
     #     arr << v.floor
     #   end
     end
-    binding.pry
+    # binding.pry
     arr.map {|a| a.to_f }.sum.round
   end
 
