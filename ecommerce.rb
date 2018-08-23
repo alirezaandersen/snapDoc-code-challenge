@@ -18,7 +18,17 @@ class Ecommerce
     #   end
     end
     # binding.pry
-    arr.map {|a| a.to_f }.sum.round
+    remaining_balance_sum = arr.map {|a| a.to_f }.sum.round
+    new_arr = []
+    prices.each do |d|
+      if d.to_s.chars.length > 3
+        new_arr << d.round
+      # binding.pry
+      else
+        new_arr << d
+      end
+    end
+    new_arr
   end
 
 end
