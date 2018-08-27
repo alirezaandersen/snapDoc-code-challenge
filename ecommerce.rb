@@ -9,7 +9,8 @@ class Ecommerce
     prices.each do |v|
     #   if v.to_s.chars
     # arr << v.round(2)
-    arr << "0."+ "#{v.to_s.split('.').last.chars.map{ |d| d.to_i}.sum}"
+    arr << v.round(3).round(2).round(1).round
+    # arr << "0."+ "#{v.to_s.split('.').last.chars.map{ |d| d.to_i}.sum}"
     end
     # binding.pry
     #     # .last.to_i >= 4
@@ -17,9 +18,9 @@ class Ecommerce
     #   else
     #     arr << v.floor
     #   end
-
-      new_arr = arr.map {|v| v.to_f.round }
-    binding.pry
+    arr
+    # binding.pry
+      # new_arr = arr.map {|v| v.to_f.round }
     # # binding.pry
     # remaining_balance_sum = arr.map {|a| a.to_f }.sum.round
     # new_arr = []
