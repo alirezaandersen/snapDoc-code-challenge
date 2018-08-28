@@ -9,9 +9,12 @@ class Ecommerce
     prices.each do |v|
     #   if v.to_s.chars
     # arr << v.round(2)
-    arr << v.round(3).round(2).round(1).round
+    a = v.round(3).to_s.chars.drop(1).join().to_f.round(2)
+    arr << a.round(1).round
+    # arr << v.round(3).round(2).round(1).round
     # arr << "0."+ "#{v.to_s.split('.').last.chars.map{ |d| d.to_i}.sum}"
     end
+    binding.pry
     # binding.pry
     #     # .last.to_i >= 4
     #     arr << v.ceil
